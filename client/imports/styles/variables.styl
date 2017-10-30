@@ -1,0 +1,65 @@
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
+// fonts
+$body-font-family = 'Open Sans', Helvetica, sans-serif
+
+// colors
+
+$accent-color = rgb(0,188,212) // cyan 500
+$light-color = rgb(255,255,255) // white
+$light-bg-color = rgb(255,255,255)
+$dark-color = rgb(0,0,0) // black
+$dark-bg-color = rgb(0,0,0)
+$box-shadow-color = rgb(0,0,0)
+$accent-color-2 = rgb(2,204,186) // turquoise
+$accent-color-3 = rgb(169,81,237) // ~purple 700
+$accent-color-4 = rgb(240,98,146) // pink 300
+$facebook-color = hsla(228, 25%, 47%, 0.9)
+
+// error
+
+$error-bg-c = $accent-color-4 !important
+
+// title bar
+
+$title-bar-bg = alpha($light-color, 0.6) !important
+$title-bar-color = alpha($dark-color, 0.33) !important
+$title-bar-svg-color = alpha($dark-color, 0.33) !important
+
+// nav
+
+$nav-bg =  alpha($accent-color, 0.9)  // rgba(0, 188, 212, .9)
+$nav-box-shadow = 0 0 2rem rgba(99,133,216,0.5)
+$nav-link-color = alpha($light-color, 0.5) !important
+$nav-link-active-color = alpha($light-color, 0.9) !important
+
+// calendar
+
+$calendar-month-color = $accent-color
+$calendar-weekdays-color = $accent-color   // #666
+$calendar-days-bg-c = $accent-color-2
+$calendar-days-bg-g = linear-gradient(to bottom right, $accent-color-2, $accent-color-3)
+$calendar-day-color = alpha($light-color, 0.6)
+$calendar-day-active-color = alpha($light-color, 1)
+$calendar-day-active-box-shadow = inset 0 -0.2rem 1rem alpha($light-bg-color, 0.5)
+$calendar-day-inactive-bg-c = alpha($dark-color, 0.05)
+$calendar-day-inactive-color = alpha($dark-color, 0.3)
+$calendar-day-inactive-box-shadow = none !important
+$calendar-day-delete-color = $light-color
+$calendar-box-shadow = alpha($box-shadow-color, 0.19) 0px 10px 30px, alpha($box-shadow-color, 0.23) 0px 6px 10px
+$calendar-prev-next-box-shadow = inset 0 -0.2rem 0.5rem alpha($box-shadow-color, 0.2)
+
+// login
+
+$login-btn-bg = linear-gradient(to bottom right, $accent-color, $facebook-color)
+//$login-btn-box-shadow = 0 2px 5px 0 alpha($box-shadow-color, 0.16), 0 2px 10px 0 alpha($box-shadow-color, 0.12)
+$login-btn-box-shadow = rgba(0, 0, 0, 0.117647) 0px 1px 6px 0px,
+    rgba(0, 0, 0, 0.117647) 0px 1px 4px 0px,
+    inset 0 -0.2rem 0.5rem rgba(0,0,0,0.2)
+
+// activities
+
+$list-activities-first-bg-c = alpha($dark-color, 0.05) !important
+$list-activities-first-c = $accent-color !important
+$add-activity-color = alpha($dark-color, 0.4)

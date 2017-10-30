@@ -1,0 +1,109 @@
+/******************
+ Table – overwrite Material-UI
+ */
+
+ table
+     border-collapse:collapse !important
+     font-family: $body-font-family !important
+
+ th
+      font-weight: bold !important
+      color: rgba(0,0,0,.54) !important
+      height: 1rem !important
+
+ thead tr
+      height: 25px !important
+
+.star
+    font-size: 1.5rem !important
+    color: $accent-color
+
+ .day-date
+     width: 11rem
+
+ .day-done
+     width: 2rem
+     padding-right: 0 !important
+     padding-left: 0 !important
+
+ .day-duration
+     width: 8rem
+
+ .day-info
+     width: 16rem
+
+ .day-place
+     width: 8rem
+
+ /* table colors */
+
+ .day-row
+     color: rgba(0, 0, 0, 0.5) !important
+
+ // .Monday
+ //     background-color: rgba(0,0,0,0.01)
+
+ .day-NOTdone
+     color: #FF9800 !important
+
+
+@media screen and (max-width:600px)
+
+    .list-days
+        padding: 0
+
+    .td-text
+        display: block
+        margin: 0.6rem 1rem 0 8rem
+
+    table.no-more-table,
+    .no-more-table thead,
+    .no-more-table tbody,
+    .no-more-table tr,
+    .no-more-table th,
+    .no-more-table td
+        display:block !important
+        height: auto !important
+        width: 100% !important
+        white-space: normal !important
+        line-height: 1.5rem
+
+
+
+    .no-more-table thead
+        position:absolute !important
+        left:-99em !important
+
+
+    .no-more-table td
+        padding: 0 !important
+        position: relative
+        min-height: 2.7rem
+        vertical-align: middle
+
+    .no-more-table td:before
+        content: attr(data-th)
+        position: absolute
+        width: 7rem
+        height: 100%
+        overflow: hidden
+        min-width: 6rem
+        margin-right: 1rem
+        display: inline-block
+        vertical-align: middle
+        padding: 0.6rem 0.5rem
+        color: rgba(0,188,212,1)
+        border-right: 1px solid rgba(0,188,212,0.4)
+        text-align: right
+        text-transform: uppercase
+
+
+    .day-row
+        box-shadow: rgba(0,0,0,0.12) 0px 1px 6px, rgba(0,0,0,0.12) 0px 1px 4px
+        border: none !important
+        padding: 1.2rem 0
+
+
+    .containedScrollingTable
+        width:100% !important
+        overflow-x:auto !important

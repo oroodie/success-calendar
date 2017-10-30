@@ -1,0 +1,183 @@
+/**********************
+Calendar
+*/
+.calendar-img,
+.feature-img,
+.calendar
+    display: block
+    width: 100%
+    max-width: 450px
+    margin: 0 auto
+    user-select: none
+
+
+.calendar-img,
+.feature-img
+    color: transparent
+
+
+.feature-img
+    margin-top: -2rem
+
+
+.calendar-title
+    text-align: center
+    font-size: 1rem
+
+
+.activity-title
+    text-align: center
+    margin: 0
+
+
+.activity-info
+    margin: 2rem 0 0
+    padding: 0.2rem 1rem 0.5rem
+    text-align: center
+    display: block
+    opacity: 0.4
+    font-size: 1rem
+    line-height: 1.5rem
+    // font-style: italic
+    // font-weight: 300;
+
+
+.calendar-main
+    box-shadow: $calendar-box-shadow
+    border-radius: .15rem
+    overflow: hidden
+    letter-spacing: 0.05rem
+    position: relative
+    user-select: none
+
+.calendar-year
+    font-size: 1.125rem
+
+.month
+    padding: 12px 15px
+    width: 100%
+    position: absolute
+    text-align: center
+
+.month ul
+    margin: 0
+    padding: 0
+
+.month ul li
+    color: $calendar-month-color
+    font-size: 1.25rem
+    text-transform: uppercase
+    letter-spacing: 0.1875rem
+    cursor: pointer
+
+.month .prev,
+.month .next
+    width: 2.4rem
+    height: 2.4rem
+    border-radius: 50%
+    line-height: 2.4rem
+    text-align: center
+    cursor: pointer
+    box-shadow: $calendar-prev-next-box-shadow
+
+
+.month .prev
+    float: left
+
+
+.month .next
+    float: right
+    padding-left: .3rem
+
+
+.weekdays
+    margin: 0
+    padding: 10px 0
+
+
+.weekdays li
+    display: inline-block
+    width: 13.6%
+    color: $calendar-weekdays-color
+    text-align: center
+
+
+.days
+    padding: 1.35rem 0 .8rem 0
+    min-height: 233px
+    margin: 0
+    background-color: $calendar-days-bg-c
+    background: $calendar-days-bg-g
+
+
+.dayItem
+    list-style-type: none
+    display: inline-block
+    width: 13.6%
+    text-align: center
+    margin-bottom: 5px
+    font-size:0.87rem
+    color: $calendar-day-color
+    padding: 0
+
+
+.day
+    width: 2rem
+    height: 2rem
+    line-height: 2rem
+    display: inline-block
+    border-radius: 50%
+    cursor: pointer
+    position: relative
+
+
+.dayItem:hover .day,
+.dayItem:active .day,
+.day.active
+    box-shadow: $calendar-day-active-box-shadow
+    color: $calendar-day-active-color
+
+
+/* .dayItem:hover .day.active,
+.dayItem:active .day.active, */
+.day.inactive,
+.dayItem:hover .day.inactive,
+.dayItem:active .day.inactive
+    background: $calendar-day-inactive-bg-c
+    color: $calendar-day-inactive-color
+    box-shadow: $calendar-day-inactive-box-shadow
+
+
+.dayItem:hover .day.inactive:before
+    content: "✘"
+    position: absolute
+    text-align: center
+    color: $calendar-day-delete-color
+    font-size: 1.7rem
+    line-height: 1.7rem
+    font-weight: 100
+    width: 100%
+    height: 100%
+    text-align: center
+    top: 0
+    left: 0
+
+
+.day.today
+    border: .1rem solid rgb(0, 188, 212)
+    line-height: 1.8rem
+
+.star-icon
+    font-size: 2rem
+    display: block
+    line-height: 2.5rem
+    font-style: normal
+
+.coffee-icon
+    font-size: 3rem
+
+.calendar-info-icons
+    display: inline-block
+    width: 6rem
+    height: 3rem
+    background: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%3Csvg%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%2062%2036%22%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xml%3Aspace%3D%22preserve%22%20style%3D%22fill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bstroke-linejoin%3Around%3Bstroke-miterlimit%3A1.41421%3B%22%3E%3Cg%20transform%3D%22matrix%280.5%2C0%2C0%2C0.5%2C-10.7114%2C-12.6716%29%22%3E%3Cpath%20d%3D%22M37.282%2C56.316l1.805%2C0l0%2C5.933c1.167%2C0.092%202.219%2C0.324%203.158%2C0.698c0.939%2C0.373%201.928%2C0.961%202.967%2C1.763l5.086%2C-4.976l1.23%2C1.23l-5.031%2C5.031c1.604%2C2.115%202.443%2C4.211%202.516%2C6.29l5.906%2C0l0%2C1.668l-5.906%2C0c-0.237%2C2.187%20-1.067%2C4.201%20-2.489%2C6.042l5.004%2C5.168l-1.312%2C1.176l-5.004%2C-4.976c-1.112%2C0.82%20-2.106%2C1.403%20-2.981%2C1.75c-0.875%2C0.346%20-1.923%2C0.592%20-3.144%2C0.738l0%2C5.934l-1.805%2C0l0%2C-5.934c-2.297%2C-0.328%20-4.311%2C-1.139%20-6.043%2C-2.434l-5.168%2C4.895l-1.203%2C-1.203l5.004%2C-5.059c-1.44%2C-1.823%20-2.288%2C-3.883%20-2.543%2C-6.18l-5.906%2C0l0%2C-1.667l5.906%2C0c0.219%2C-2.297%201.057%2C-4.339%202.516%2C-6.125l-4.977%2C-5.032l1.121%2C-1.34l5.168%2C4.977c2.097%2C-1.422%204.138%2C-2.233%206.125%2C-2.434l0%2C-5.933Zm0.848%2C7.629c-2.516%2C0%20-4.658%2C0.893%20-6.426%2C2.679c-1.768%2C1.787%20-2.652%2C3.929%20-2.652%2C6.426c0%2C2.516%200.884%2C4.658%202.652%2C6.426c1.768%2C1.768%203.91%2C2.652%206.426%2C2.652c2.515%2C0%204.662%2C-0.884%206.439%2C-2.652c1.778%2C-1.768%202.666%2C-3.91%202.666%2C-6.426c0%2C-2.497%20-0.888%2C-4.639%20-2.666%2C-6.426c-1.777%2C-1.786%20-3.924%2C-2.679%20-6.439%2C-2.679Z%22%20style%3D%22fill%3A%234c4c4c%3Bfill-rule%3Anonzero%3B%22/%3E%3Cpath%20d%3D%22M62.536%2C57.785c-0.029%2C1.575%200.129%2C3.451%200.473%2C5.628l34.804%2C0c0.23%2C-1.403%200.373%2C-3.28%200.43%2C-5.628c0%2C-0.602%20-0.301%2C-0.903%20-0.902%2C-0.903l-33.86%2C0c-0.544%2C0.115%20-0.859%2C0.416%20-0.945%2C0.903Zm2.02%2C11.644c0.114%2C0.688%200.329%2C1.275%200.644%2C1.762l30.551%2C0c0.286%2C-0.602%200.516%2C-1.189%200.687%2C-1.762l-31.882%2C0Zm34.074%2C-8.035c-0.172%2C2.922%20-0.845%2C6.187%20-2.02%2C9.797c1.748%2C-0.029%203.108%2C-1.074%204.082%2C-3.137c0.631%2C-1.604%200.917%2C-3.595%200.86%2C-5.973c0%2C-0.458%20-0.33%2C-0.687%20-0.989%2C-0.687l-1.933%2C0Zm0.215%2C-3.481c-0.029%2C0.774%20-0.058%2C1.59%20-0.086%2C2.45l1.633%2C0c1.174%2C0%201.761%2C0.63%201.761%2C1.89c0%2C3.495%20-0.687%2C6.274%20-2.062%2C8.336c-0.888%2C1.06%20-2.149%2C1.604%20-3.781%2C1.633c-0.631%2C1.633%20-1.461%2C3.423%20-2.493%2C5.371l0.215%2C0c1.175%2C0%202.149%2C-0.773%202.922%2C-2.32c0.372%2C-0.373%201.647%2C-0.974%203.824%2C-1.805c1.089%2C-1.174%201.934%2C-3.28%202.535%2C-6.316c0.459%2C-2.034%200.688%2C-4.197%200.688%2C-6.489c0%2C-1.833%20-1.203%2C-2.75%20-3.609%2C-2.75l-1.547%2C0Zm-20.196%2C-32.57l0.258%2C0c0%2C1.49%20-0.494%2C3.151%20-1.482%2C4.985c-0.989%2C1.833%20-1.497%2C3.924%20-1.526%2C6.273c0%2C3.036%200.688%2C5.271%202.063%2C6.703c1.375%2C1.432%202.105%2C4.526%202.191%2C9.281l-0.258%2C0c-0.372%2C-3.924%20-1.661%2C-7.247%20-3.867%2C-9.968c-0.659%2C-1.204%20-1.088%2C-2.879%20-1.289%2C-5.028c-0.057%2C-2.922%200.487%2C-5.206%201.633%2C-6.853c1.146%2C-1.647%201.905%2C-3.445%202.277%2C-5.393Zm-9.41%2C55c7.104%2C0.63%2014.395%2C0.659%2021.871%2C0.086c0.688%2C-0.43%201.963%2C-2.678%203.825%2C-6.746l-29.09%2C0c0.744%2C2.091%201.876%2C4.311%203.394%2C6.66Zm23.031%2C0c5.099%2C-0.659%208.68%2C-1.117%2010.743%2C-1.375c0.372%2C0%200.616%2C0.129%200.73%2C0.387l0%2C0.43c0%2C0.429%20-3.609%2C1.46%20-10.828%2C3.093l-3.824%2C1.418l0.043%2C0.43c0%2C0.401%20-0.158%2C0.702%20-0.473%2C0.902l-15.898%2C0c-0.344%2C-0.172%20-0.516%2C-0.472%20-0.516%2C-0.902l0%2C-0.258l0.129%2C-0.086l0%2C-0.086c-8.279%2C-2.263%20-12.934%2C-3.638%20-13.965%2C-4.125l-0.086%2C-0.515l0%2C-0.172c0.086%2C-0.287%200.315%2C-0.43%200.688%2C-0.43c1.69%2C0.229%204.698%2C0.616%209.023%2C1.16c-4.039%2C-6.817%20-6.058%2C-14.294%20-6.058%2C-22.429c0%2C-1.29%200.544%2C-1.934%201.632%2C-1.934l34.032%2C0c0.658%2C0.057%200.988%2C0.401%200.988%2C1.031l1.633%2C0c2.893%2C0%204.34%2C1.332%204.34%2C3.996c0%2C4.154%20-0.874%2C8.293%20-2.622%2C12.418c-0.687%2C1.089%20-2.162%2C1.934%20-4.425%2C2.535c-1.06%2C1.92%20-2.263%2C2.879%20-3.61%2C2.879l-0.215%2C0l-0.515%2C-0.172l-0.946%2C1.805Zm-28.703%2C-14.652c0.115%2C0.716%200.272%2C1.317%200.473%2C1.804l32.957%2C0c0.229%2C-0.515%200.387%2C-1.117%200.473%2C-1.804l-33.903%2C0Zm23.032%2C-20.153c-0.144%2C1.347%20-0.401%2C2.392%20-0.774%2C3.137c-1.26%2C1.719%20-2.005%2C3.796%20-2.234%2C6.231l-0.172%2C0c0.057%2C-2.951%200.487%2C-4.884%201.289%2C-5.801c0.802%2C-0.917%201.203%2C-2.306%201.203%2C-4.168c0%2C-1.518%20-0.286%2C-2.843%20-0.859%2C-3.975c-0.573%2C-1.131%20-0.86%2C-2.17%20-0.86%2C-3.115l0.172%2C0c0.201%2C1.232%200.63%2C2.356%201.289%2C3.373c0.659%2C1.017%200.974%2C2.456%200.946%2C4.318Z%22%20style%3D%22fill%3A%23333%3Bfill-rule%3Anonzero%3B%22/%3E%3Cpath%20d%3D%22M112.657%2C48.413c2.406%2C-0.783%204.931%2C-1.175%207.574%2C-1.175c4.394%2C0%208.495%2C1.103%2012.305%2C3.308c3.81%2C2.206%206.818%2C5.214%209.024%2C9.024c2.205%2C3.81%203.308%2C7.911%203.308%2C12.304c0%2C4.394%20-1.103%2C8.5%20-3.308%2C12.319c-2.206%2C3.819%20-5.219%2C6.827%20-9.038%2C9.023c-3.819%2C2.197%20-7.916%2C3.295%20-12.291%2C3.295c-2.643%2C0%20-5.168%2C-0.392%20-7.574%2C-1.176c5.651%2C-1.385%2010.19%2C-4.274%2013.617%2C-8.668c3.427%2C-4.393%205.141%2C-9.324%205.141%2C-14.793c0%2C-5.487%20-1.714%2C-10.427%20-5.141%2C-14.82c-3.427%2C-4.393%20-7.966%2C-7.273%20-13.617%2C-8.641Zm6.317%2C46.321c0.218%2C0.073%200.638%2C0.109%201.257%2C0.109c6.381%2C0%2011.799%2C-2.228%2016.256%2C-6.685c4.457%2C-4.457%206.686%2C-9.885%206.686%2C-16.284c0%2C-4.156%20-1.016%2C-8.011%20-3.049%2C-11.566c-2.033%2C-3.555%20-4.822%2C-6.344%20-8.367%2C-8.367c-3.546%2C-2.024%20-7.388%2C-3.035%20-11.526%2C-3.035c-0.619%2C0%20-1.039%2C0.036%20-1.257%2C0.109c4.612%2C2.552%208.121%2C5.811%2010.527%2C9.775c2.406%2C3.965%203.609%2C8.327%203.609%2C13.084c0%2C4.74%20-1.203%2C9.097%20-3.609%2C13.071c-2.406%2C3.974%20-5.915%2C7.237%20-10.527%2C9.789Z%22%20style%3D%22fill%3A%234c4c4c%3Bfill-rule%3Anonzero%3B%22/%3E%3C/g%3E%3C/svg%3E') no-repeat center center;

@@ -1,0 +1,22 @@
+/******************
+Loading Component
+*/
+
+.loading-parent
+    position: relative
+
+.loading
+    position: absolute
+    top: 10%
+    right: 33%
+    bottom: auto
+    left: auto
+    animation: spin 2s linear infinite
+    color: rgba(0,0,0, 0.1) !important
+    width: 10rem !important
+    height: 10rem !important
+
+@keyframes spin {
+    0% { transform: rotate(360deg) }
+    100% { transform: rotate(0deg) }
+}

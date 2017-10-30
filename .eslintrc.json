@@ -1,0 +1,30 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "env": {
+        "es6": true
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "no-underscore-dangle": 0,
+        "semi": 0,
+        "global-require": 0,
+        "padded-blocks": 0,
+        "import/no-unresolved": 0,
+        "camelcase": 0,
+        "one-var": 0,
+        "space-in-parens": ["error", "never", { "exceptions": ["()"] }],
+        "space-unary-ops": [ 2, {
+              "overrides": {
+                "!": true,
+                "!!": true
+              }
+        }]
+    }
+}
