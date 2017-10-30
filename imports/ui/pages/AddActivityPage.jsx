@@ -125,11 +125,11 @@ export default class AddActivityPage extends React.PureComponent {
         if (this.state.redirect) {
             return <Redirect push to='/' />
         }
-        
+
         const noUser = ! this.props.user
 
         return (
-            <div>
+            <div className='page'>
                 <FeatureImg />
                 <LoginBox />
 

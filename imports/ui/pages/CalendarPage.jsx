@@ -269,7 +269,7 @@ export default class CalendarPage extends React.PureComponent {
         }
 
         return (
-            <div>
+            <div className='page'>
                 <section className='calendar content'>
 
                     <h2 className='sr-only'>Calendar</h2>

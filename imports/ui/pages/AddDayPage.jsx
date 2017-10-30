@@ -263,7 +263,7 @@ export default class AddDayPage extends React.PureComponent {
             duration,
             activityId} = this.state
         return (
-            <div>
+            <div className='page'>
                 <FeatureImg />
                 <LoginBox/>
 
